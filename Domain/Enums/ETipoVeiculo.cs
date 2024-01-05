@@ -9,7 +9,7 @@ namespace Domain.Enums
     public enum ETipoVeiculo
     {
         SUV = 1,
-        RET = 2,
+        RETCH = 2,
         SEDAN = 3,
     }
 }
