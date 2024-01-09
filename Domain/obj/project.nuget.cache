@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X+c1z1uPk/S0k9jomg7E2xK0glDgq2D0MciX158WUko9DQEzNxChzIUWKcYmVB7bo03+mR8eqGC9zX9Lgt9vRA==",
+  "dgSpecHash": "vmRB6i26Mq2o1e07ARa6Z0YQ+c+doJE71oG2yTNDNCL9hJrEBM2IXf9tHAD8MoLFYOd2tyE/znq7NHomr/1jow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

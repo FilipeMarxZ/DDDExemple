@@ -10,22 +10,20 @@ namespace Application.Controllers
     [ApiController]
     public class VeiculoController : ControllerBase
     {
-        private readonly IVeiculoSevice _veiculoService;
-        public VeiculoController(IVeiculoSevice veiculoSevice)
+        private readonly IVeiculoService _veiculoService;
+        public VeiculoController(IVeiculoService veiculoService)
         {
-            _veiculoService = veiculoSevice;
+            _veiculoService = veiculoService;
         }
         [HttpPost]
         [Route("CadastrarVeiculo")]
         public async Task<IActionResult> PostAsync([FromBody] VeiculoCommand command)
         {
-            await _veiculoService.PostAsync(command);
-            return Ok();
+            return Ok(await _veiculoService.PostAsync(command));
         }
         [HttpGet]
         [Route("SimularAluguel")]
         public IActionResult GetAsync()
-        
         {
             return Ok();
         }

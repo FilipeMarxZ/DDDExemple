@@ -1,4 +1,5 @@
 ﻿using Domain.Commands;
+using Domain.Enums;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,28 +9,34 @@ using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    public class VeiculoService : IVeiculoSevice
+    public class VeiculoService : IVeiculoService
     {
         public void GetAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task PostAsync(VeiculoCommand command)
+        public async Task<string> PostAsync(VeiculoCommand command)
         {
-            if (new command = null)
+            if (command == null)
+                return "Todos os Campos são obrigatórios";
+            //Todo
+            int anoAtual = DateTime.Now.Year;
+            if ((anoAtual - command.AnoFabricacao) > 5)
+                return "O ano do veiculo é menor que o permitido!";
+            // Incluir validação, só podem cadastrar veículos com
+            //até 5 anos de uso
 
-            //To-do
-            //Incluir validação, só podem cadastrar veículos com até 5 anos de uso
             //To do
-            //Incluir somente carros do tipo SUV, Sedan e Hatch
-            
-            if(command.TipoVeiculo != ETipoVeiculo.SUV
-               || command.TipoVeiculo != ETipoVeiculo.Hetch
-               || command.TipoVeiculo != ETipoVeiculo.Sedan
+            //Incluir Somente carros do tipo SUV, Sedan e Hatch 
+            if (command.TipoVeiculo != ETipoVeiculo.SUV
+                && command.TipoVeiculo != ETipoVeiculo.RET
+                && command.TipoVeiculo != ETipoVeiculo.SEDAN
             )
+                return "o tipo de veiculo não é permitido";
 
-            throw new NotImplementedException();
+
+            return _veiculoRepository.PostAsync(command);
         }
 
         public void PostAsync()

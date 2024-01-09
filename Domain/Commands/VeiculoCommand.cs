@@ -9,6 +9,8 @@ namespace Domain.Commands
 {
     public class VeiculoCommand
     {
+
+        public VeiculoCommand() { }
         public int VeiculoId { get; set; }
         public string Placa { get; set; }
         public int AnoFabricacao { get; set; }
