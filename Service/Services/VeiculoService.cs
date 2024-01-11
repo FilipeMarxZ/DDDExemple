@@ -11,6 +11,14 @@ namespace Service.Services
 {
     public class VeiculoService : IVeiculoService
     {
+        //Injeção de dependencia
+
+        private readonly IVeiculoRepository _repository;
+
+        public VeiculoService(IVeiculoRepository repository)
+        {
+            _repository = repository;
+        }
         public void GetAsync()
         {
             throw new NotImplementedException();
@@ -36,7 +44,7 @@ namespace Service.Services
                 return "o tipo de veiculo não é permitido";
 
 
-            return _veiculoRepository.PostAsync(command);
+            return await _repository.PostAsync(command);
         }
 
         public void PostAsync()

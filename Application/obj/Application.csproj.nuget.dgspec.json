@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Application\\Application.csproj": {}
+    "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Application\\Application.csproj": {
+    "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\filipe.msilva5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Application\\obj\\",
+        "outputPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj"
+              "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\Service.csproj"
+              "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\Service.csproj"
               }
             }
           }
@@ -54,6 +54,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [
@@ -79,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj": {
+    "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\filipe.msilva5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,6 +122,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -138,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\filipe.msilva5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,8 +176,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj"
+              "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj"
               }
             }
           }
@@ -186,9 +196,9 @@
               "target": "Package",
               "version": "[2.1.28, )"
             },
-            "Microsoft.Data.SqlClient": {
+            "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.2, )"
+              "version": "[4.8.6, )"
             }
           },
           "imports": [
@@ -211,14 +221,14 @@
         }
       }
     },
-    "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\Service.csproj": {
+    "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\filipe.msilva5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Service\\obj\\",
+        "outputPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -239,11 +249,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Domain\\Domain.csproj"
+              "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\filipe.msilva5\\Desktop\\DDDExample\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\filipe.msilva5\\source\\repos\\Application\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -257,6 +267,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
