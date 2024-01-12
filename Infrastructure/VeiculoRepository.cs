@@ -9,8 +9,8 @@ namespace Infrastructure.Repository
         string conexao = @"Server=(localdb)\mssqllocaldb;Database=AluguelVeiculos;Trusted_Connection=True;MultipleActiveResultSets=True";
         public async Task<string> PostAsync(VeiculoCommand command)
         {
-            string queryInsert = @"INSERT INTO (Veiculo Placa,AnoFabricacao,TipoVeiculoId,Estado,MontadoraId)
-                                 VALUES (@Placa, @AnoFabricacao,@TipoVeiculoId, @Estado, @MontadoraId)";
+            string queryInsert = @"INSERT INTO (Veiculo Placa,AnoFabricacao,TipoVeiculoId,Estado,MontadoraId,VeiculoAlugado)
+                                 VALUES (@Placa, @AnoFabricacao,@TipoVeiculoId, @Estado, @MontadoraId, @VeiculoAlugado)";
 
             using (SqlConnection conn = new SqlConnection(conexao))
             {
@@ -25,6 +25,7 @@ namespace Infrastructure.Repository
 
                 return "Veiculo cadastrado com sucesso";
             }
+
         }
 
         public void PostAsync()

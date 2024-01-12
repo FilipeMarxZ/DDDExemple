@@ -33,5 +33,12 @@ namespace Application.Controllers
         {
             return Ok();
         }
+        [HttpGet]
+        [Route("Veiculo Alugado")]
+        async Task<IEnumerable<VeiculoCommand>> GetVeiculosAlugadosAsync()
+        {
+            return Ok(await _veiculoService.PostAsync());
+        }
+
     }
 }
