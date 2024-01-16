@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Domain.Commands;
+using Domain.Enums;
 using Domain.Interfaces;
 using System.Data.SqlClient;
 namespace Infrastructure.Repository
@@ -42,6 +43,19 @@ namespace Infrastructure.Repository
         {
             throw new NotImplementedException();
         }
+
+        public async Task<IEnumerable<VeiculoCommand>> GetVeiculosAlugadosAsync()
+        {
+            string queryget = @"Select * from Veiculo";
+
+            using (SqlConnection conn = new SqlConnection(conexao))
+            {
+                return await conn.QueryAsync<VeiculoCommand>(queryget);
+            }
+        }
+
+            
+       
     }
 
     

@@ -24,6 +24,11 @@ namespace Service.Services
             throw new NotImplementedException();
         }
 
+        public async Task<IEnumerable<VeiculoCommand>> GetVeiculosAlugadosAsync()
+        {
+            return await _repository.GetVeiculosAlugadosAsync();
+        }
+
         public async Task<string> PostAsync(VeiculoCommand command)
         {
             if (command == null)

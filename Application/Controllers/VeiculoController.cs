@@ -35,9 +35,9 @@ namespace Application.Controllers
         }
         [HttpGet]
         [Route("Veiculo Alugado")]
-        async Task<IEnumerable<VeiculoCommand>> GetVeiculosAlugadosAsync()
+        public async Task<IActionResult> GetVeiculosAlugadosAsync()
         {
-            return Ok(await _veiculoService.PostAsync());
+            return Ok( await _veiculoService.GetVeiculosAlugadosAsync());
         }
 
     }
